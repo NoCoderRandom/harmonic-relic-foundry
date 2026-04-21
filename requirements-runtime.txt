@@ -1,0 +1,6 @@
+# OpenGL and windowing dependencies
+libgl1-mesa-dev
+libglu1-mesa-dev
+libglfw3-dev
+mesa-utils
+xorg-dev

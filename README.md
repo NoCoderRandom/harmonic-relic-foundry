@@ -27,11 +27,10 @@ The project is designed as symbolic machine-archaeology rather than a convention
 
 ## Setup
 
-Use the included setup helper on apt-based systems:
+Use the root-level installer on apt-based systems:
 
 ```bash
-chmod +x scripts/setup_env.sh
-./scripts/setup_env.sh
+./install_requirements.sh
 ```
 
 Manual package installation equivalent:
@@ -42,6 +41,14 @@ sudo apt-get install gfortran gcc cmake build-essential mesa-utils libglfw3-dev 
 
 ## Build
 
+Fast path:
+
+```bash
+./build.sh
+```
+
+Equivalent raw CMake commands:
+
 ```bash
 cmake -S . -B build
 cmake --build build -j4
@@ -49,17 +56,16 @@ cmake --build build -j4
 
 ## Run
 
-From the repository root:
+Fast path:
+
+```bash
+./run.sh
+```
+
+Equivalent direct binary launch from the repository root:
 
 ```bash
 ./build/harmonic_relic_foundry
-```
-
-From the build directory:
-
-```bash
-cd build
-./harmonic_relic_foundry
 ```
 
 ## Controls
@@ -99,12 +105,17 @@ The export path is intentionally dependency-light:
 ├── CMakeLists.txt
 ├── README.md
 ├── .gitignore
+├── build.sh
 ├── docs/
 │   ├── algorithms.md
 │   ├── methods.md
 │   └── technical-architecture.md
+├── install_requirements.sh
+├── requirements-build.txt
+├── requirements-runtime.txt
+├── run.sh
 ├── scripts/
-│   └── setup_env.sh
+│   └── setup_env.sh          # compatibility wrapper
 └── src/
     ├── exploration_controls.f90
     ├── field_simulation.f90

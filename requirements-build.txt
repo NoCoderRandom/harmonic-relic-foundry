@@ -1,0 +1,6 @@
+# Core build tools
+build-essential
+cmake
+gcc
+gfortran
+git
