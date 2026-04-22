@@ -2,6 +2,14 @@
 
 Harmonic Relic Foundry is a real-time procedural rendering project built with Modern Fortran, C, OpenGL, and GLFW. It generates an explorable symbolic chamber of interacting relic structures: a dominant shrine-like form, secondary supporting regions, a shared resonance field, and a procedural presentation pass for bloom, vignette, and still capture.
 
+## Gallery
+
+<p align="center">
+  <img src="docs/screenshots/gallery-default-shrine.png" alt="Default shrine composition rendered by Harmonic Relic Foundry" width="32%">
+  <img src="docs/screenshots/gallery-offset-cathedral.png" alt="Offset cathedral composition with denser glyph layering" width="32%">
+  <img src="docs/screenshots/gallery-close-fracture-study.png" alt="Close fracture study with a tighter camera and stronger pulse" width="32%">
+</p>
+
 ## Artistic Direction
 
 The project is designed as symbolic machine-archaeology rather than a conventional shader toy. The target image is an impossible shrine: layered, luminous, and legible. Composition matters more than raw visual density. The dominant relic anchors the frame, secondary relics create spatial conversation around it, and the shared field provides motion without dissolving the image into noise.
@@ -97,6 +105,12 @@ The export path is intentionally dependency-light:
 - no external image library
 - no absolute paths
 - no editor-specific tooling
+
+To regenerate the README gallery PNGs from the real renderer:
+
+```bash
+bash scripts/render_gallery.sh
+```
 
 ## Repository Layout
 
